@@ -147,7 +147,7 @@ journals = [
     (1.9, "JOURNAL OF COMPUTATIONAL PHYSICS", 28, 3.8, "No", "Elsevier"),
     (1.9, "Intermetallics", 24, 4.8, "No", "Elsevier"),
     (1.8, "Journal of Chemical Information and Modeling", "", 5.3, "No", "ACS"),
-    (1.8, "Journal of Computational Science", "", 3.7, "No", "Elsevier"),
+    (1.5, "Journal of Computational Science", "", 3.7, "No", "Elsevier"),
     (1.7, "Computer Physics Communications", 38, 3.4, "No", "Elsevier"),
     (1.4, "Materials Chemistry and Physics", 16, 4.7, "No", "Elsevier"),
     (0.0, "Computational Condensed Matter - NOT RECOMMENDED, CURRENTLY in ESCI index, not SCIE", 16, 3.9, "NO", "Elsevier"),
