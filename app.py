@@ -159,6 +159,8 @@ journals = [
     (0.8, "CALPHAD-COMPUTER COUPLING OF PHASE DIAGRAMS AND THERMOCHEMISTRY", "", 1.9, "No", "Elsevier"),
     (0.7, "NUCLEAR INSTRUMENTS & METHODS IN PHYSICS RESEARCH SECTION B-BEAM INTERACTIONS WITH MATERIALS AND ATOMS", 52,
      1.3, "No", "Elsevier"),
+    (1.2, "Materials", "",
+     3.2, "No", "MDPI"),
     (9.3, "Reports on Progress in Physics", 4,
          20.3, "No", "IOP"),
 ]
