@@ -163,6 +163,8 @@ journals = [
      3.2, "No", "MDPI"),
     (2.1, "Advanced Theory and Simulations", "",
      2.9, "No", "Willey"),
+    (1.3, "Vacuum", "",
+     3.9, "No", "Elsevier"),
     (9.3, "Reports on Progress in Physics", 4,
          20.3, "No", "IOP"),
 ]
