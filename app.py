@@ -36,45 +36,46 @@ st.header("📋 Recommended Journals by Average Score")
 
 journals = [
     (5.3, "Journal of Materials Science & Technology", "", 14.3, "OA Only", "Elsevier", "Yes"),
-    (3.4, "Acta Materialia", "", 9.3, "No", "Elsevier", "No"),
-    (3.1, "CORROSION SCIENCE", 19, 8.5, "No", "Elsevier", "No"),
+    (3.4, "Acta Materialia", "", 9.3, "No", "Elsevier", "Yes"),
+    (3.1, "CORROSION SCIENCE", 19, 8.5, "No", "Elsevier", "Yes"),
     (3.6, "npj Computational Materials", "", 11.9, "OA Only", "Nature", "No"),
     (3.3, "Materials Science and Engineering: A", 18, 7, "No", "Elsevier", "No"),
-    (3.1, "Ceramics International", 33, 5.6, "No", "Elsevier", "No"),
+    (8.6, "Materials Science and Engineering: R: Reports", 16, 26.8, "No", "Elsevier", "Yes"),
+    (3.5, "Ceramics International", 33, 5.6, "No", "Elsevier", "No"),
     (3.0, "Applied Surface Science Advances - NOT RECOMMENDED, in ESCI index, not SCIE", "", 8.7, "OA Only", "Elsevier", "No"),
-    (2.8, "Journal of Materials Research & Technology", "", 6.6, "OA Only", "Nature", "No"),
-    (2.8, "Scientific reports (Nature portfolio) - NOT RECOMMENDED, BAD REPUTATION RECENTLY", "", 3.9, "OA Only", "Nature", "No"),
-    (2.6, "Matter and Radiation at Extremes", "", 4.73, "No", "AIP", "No"),
-    (2.4, "Journal of Alloys and Compounds", 23, 6.3, "No", "Elsevier", "No"),
-    (2.4, "MATERIALS & DESIGN", 27, 7.9, "OA only", "Elsevier", "No"),
-    (2.4, "Applied Surface Science", 16, 6.9, "No", "Elsevier", "No"),
-    (2.2, "ACS Applied Materials & Interfaces", "", 8.2, "No", "Elsevier", "No"),
+    (2.4, "Journal of Materials Research & Technology", "", 6.6, "OA Only", "Elsevier", "Yes"),
+    (1.5, "Scientific reports (Nature portfolio) - NOT RECOMMENDED, BAD REPUTATION RECENTLY", "", 3.9, "OA Only", "Nature", "No"),
+    (2.1, "Matter and Radiation at Extremes", "", 4.73, "No", "AIP", "Yes"),
+    (1.9, "Journal of Alloys and Compounds", 23, 6.3, "No", "Elsevier", "Yes"),
+    (2.3, "MATERIALS & DESIGN", 27, 7.9, "OA only", "Elsevier", "Yes"),
+    (2.5, "Applied Surface Science", 16, 6.9, "No", "Elsevier", "Yes"),
+    (2.1, "ACS Applied Materials & Interfaces", "", 8.2, "No", "ACS", "Yes"),
     (2.2, "Surface & Coatings Technology", 16, 6.1, "No", "Elsevier", "No"),
-    (2.2, "Surfaces and Interfaces", 22, 6.3, "No", "Elsevier", "No"),
+    (2.3, "Surfaces and Interfaces", 22, 6.3, "No", "Elsevier", "Yes"),
     (2.1, "Journal of Chemical Theory & Computation", "", 5.5, "No", "ACS", "No"),
-    (2.1, "Machine Learning: Science and Technology", 26, 4.6, "No", "IOP", "No"),
-    (2.1, "Chemistry of materials", "", 7, "No", "ACS", "No"),
+    (1.5, "Machine Learning: Science and Technology", 26, 4.6, "No", "IOP", "Yes"),
+    (2.1, "Chemistry of materials", "", 7, "No", "ACS", "Yes"),
     (1.9, "JOURNAL OF COMPUTATIONAL PHYSICS", 28, 3.8, "No", "Elsevier", "No"),
     (1.9, "Intermetallics", 24, 4.8, "No", "Elsevier", "No"),
     (1.8, "Journal of Chemical Information and Modeling", "", 5.3, "No", "ACS", "No"),
-    (1.5, "Journal of Computational Science", "", 3.7, "No", "Elsevier", "No"),
+    (1.4, "Journal of Computational Science", "", 3.7, "No", "Elsevier", "Yes"),
     (1.7, "Computer Physics Communications", 38, 3.4, "No", "Elsevier", "No"),
-    (1.4, "Materials Chemistry and Physics", 16, 4.7, "No", "Elsevier", "No"),
+    (1.4, "Materials Chemistry and Physics", 16, 4.7, "No", "Elsevier", "Yes"),
     (0.0, "Computational Condensed Matter - NOT RECOMMENDED, CURRENTLY in ESCI index, not SCIE", 16, 3.9, "NO", "Elsevier", "No"),
-    (1.3, "Journal of Applied Crystallography", "", 2.8, "No", "Willey", "No"),
-    (1.2, "Journal of Physical Chemistry C", "", 3.2, "No", "ACS", "No"),
-    (1.0, "Computational Materials Science", 21, 3.3, "No", "Elsevier", "No"),
+    (1.1, "Journal of Applied Crystallography", "", 2.8, "No", "Willey", "Yes"),
+    (0.9, "Journal of Physical Chemistry C", "", 3.2, "No", "ACS", "Yes"),
+    (1.0, "Computational Materials Science", 21, 3.3, "No", "Elsevier", "Yes"),
     (0.8, "Modelling and Simulation in Materials Science and Engineering", 25, 2.4, "No", "IOP", "No"),
     (0.8, "Molecular simulation", 13, 2, "No", "Taylor and Francis", "No"),
     (0.8, "CALPHAD-COMPUTER COUPLING OF PHASE DIAGRAMS AND THERMOCHEMISTRY", "", 1.9, "No", "Elsevier", "No"),
     (0.7, "NUCLEAR INSTRUMENTS & METHODS IN PHYSICS RESEARCH SECTION B-BEAM INTERACTIONS WITH MATERIALS AND ATOMS", 52, 1.3, "No", "Elsevier", "No"),
-    (1.2, "Materials", "", 3.2, "No", "MDPI", "No"),
+    (1.1, "Materials", "", 3.2, "No", "MDPI", "Yes"),
     (2.1, "Advanced Theory and Simulations", "", 2.9, "No", "Willey", "No"),
-    (1.3, "Vacuum", "", 3.9, "No", "Elsevier", "No"),
-    (9.3, "Reports on Progress in Physics", 4, 20.3, "No", "IOP", "No"),
+    (1.3, "Vacuum", "", 3.9, "No", "Elsevier", "Yes"),
+    (9.4, "Reports on Progress in Physics", 4, 20.3, "No", "IOP", "Yes"),
 ]
 
-df = pd.DataFrame(journals, columns=["Average Score", "Journal", "Acceptance Rate (%)", "IF2024", "OpenAccess", "Publisher", "From V3S"])
+df = pd.DataFrame(journals, columns=["Average Score", "Journal", "Acceptance Rate (%)", "IF2024", "OpenAccess", "Publisher", "From System"])
 
 df['Acceptance Rate (%)'] = df['Acceptance Rate (%)'].replace('', 'Not available')
 df['Publisher'] = df['Publisher'].replace('', 'Not available')
@@ -90,7 +91,7 @@ else:
 
 
 def build_html_table(df):
-    header_cols = ["Average Score", "Journal", "Acceptance Rate (%)", "IF2024", "OpenAccess", "Publisher", "From V3S", "Expected Reward"]
+    header_cols = ["Average Score", "Journal", "Acceptance Rate (%)", "IF2024", "OpenAccess", "Publisher", "From System", "Expected Reward"]
 
     header_html = "".join(
         f'<th onclick="sortTable(this, {i})">{col} <span class="sort-icon">&#x21C5;</span></th>'
@@ -111,10 +112,10 @@ def build_html_table(df):
         else:
             journal_cell = journal_text
 
-        if row['From V3S'] == 'Yes':
+        if row['From System'] == 'Yes':
             v3s_cell = '<td class="center bold" style="background-color:#1a7a1a; color:white;">Yes</td>'
         else:
-            v3s_cell = f'<td class="center" style="color:#555;">{row["From V3S"]}</td>'
+            v3s_cell = f'<td class="center" style="color:#555;">{row["From System"]}</td>'
 
         cells = (
             f'<td class="center bold">{row["Average Score"]}</td>'
