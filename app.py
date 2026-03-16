@@ -35,7 +35,7 @@ def format_number(num):
 st.header("📋 Recommended Journals by Average Score")
 
 journals = [
-    (5.3, "Journal of Materials Science & Technology", "", 14.3, "OA Only", "Elsevier", "No"),
+    (5.3, "Journal of Materials Science & Technology", "", 14.3, "OA Only", "Elsevier", "Yes"),
     (3.4, "Acta Materialia", "", 9.3, "No", "Elsevier", "No"),
     (3.1, "CORROSION SCIENCE", 19, 8.5, "No", "Elsevier", "No"),
     (3.6, "npj Computational Materials", "", 11.9, "OA Only", "Nature", "No"),
