@@ -99,9 +99,7 @@ def build_html_table(df):
 
     rows_html = ""
     for _, row in df.iterrows():
-        if row['From V3S'] == 'Yes':
-            row_bg = '#ccffcc'
-        elif 'NOT RECOMMENDED' in str(row['Journal']):
+        if 'NOT RECOMMENDED' in str(row['Journal']):
             row_bg = '#ffe6e6'
         else:
             row_bg = ''
@@ -113,7 +111,10 @@ def build_html_table(df):
         else:
             journal_cell = journal_text
 
-        v3s_color = '#1a7a1a' if row['From V3S'] == 'Yes' else '#555'
+        if row['From V3S'] == 'Yes':
+            v3s_cell = '<td class="center bold" style="background-color:#1a7a1a; color:white;">Yes</td>'
+        else:
+            v3s_cell = f'<td class="center" style="color:#555;">{row["From V3S"]}</td>'
 
         cells = (
             f'<td class="center bold">{row["Average Score"]}</td>'
@@ -122,7 +123,7 @@ def build_html_table(df):
             f'<td class="center bold">{row["IF2024"]}</td>'
             f'<td class="center">{row["OpenAccess"]}</td>'
             f'<td class="center">{row["Publisher"]}</td>'
-            f'<td class="center bold" style="color:{v3s_color}">{row["From V3S"]}</td>'
+            + v3s_cell +
             f'<td class="right bold">{row["Expected Reward"]}</td>'
         )
         bg_attr = f' style="background-color:{row_bg};"' if row_bg else ''
