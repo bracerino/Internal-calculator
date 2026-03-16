@@ -142,7 +142,7 @@ journals = [
     (2.2, "Surface & Coatings Technology", 16, 6.1, "No", "Elsevier", "No"),
     (2.2, "Surfaces and Interfaces", 22, 6.3, "No", "Elsevier", "No"),
     (2.1, "Journal of Chemical Theory & Computation", "", 5.5, "No", "ACS", "No"),
-    (2.1, "Machine Learning: Science and Technology", 26, 4.6, "No", "IOP", "No"),
+    (2.1, "Machine Learning: Science and Technology", 26, 4.6, "No", "IOP", "Yes"),
     (2.1, "Chemistry of materials", "", 7, "No", "ACS", "No"),
     (1.9, "JOURNAL OF COMPUTATIONAL PHYSICS", 28, 3.8, "No", "Elsevier", "No"),
     (1.9, "Intermetallics", 24, 4.8, "No", "Elsevier", "No"),
@@ -158,7 +158,7 @@ journals = [
     (0.8, "Molecular simulation", 13, 2, "No", "Taylor and Francis", "No"),
     (0.8, "CALPHAD-COMPUTER COUPLING OF PHASE DIAGRAMS AND THERMOCHEMISTRY", "", 1.9, "No", "Elsevier", "No"),
     (0.7, "NUCLEAR INSTRUMENTS & METHODS IN PHYSICS RESEARCH SECTION B-BEAM INTERACTIONS WITH MATERIALS AND ATOMS", 52,
-     1.3, "No", "Elsevier", "Yes"),
+     1.3, "No", "Elsevier", "No"),
     (1.2, "Materials", "",
      3.2, "No", "MDPI", "No"),
     (2.1, "Advanced Theory and Simulations", "",
@@ -170,7 +170,7 @@ journals = [
 ]
 
 df = pd.DataFrame(journals,
-                  columns=["Average Score", "Journal", "Acceptance Rate (%)", "IF2024", "OpenAccess", "Publisher", "From System"])
+                  columns=["Average Score", "Journal", "Acceptance Rate (%)", "IF2024", "OpenAccess", "Publisher", "From V3S"])
 
 df['Acceptance Rate (%)'] = df['Acceptance Rate (%)'].replace('', 'Not available')
 df['Publisher'] = df['Publisher'].replace('', 'Not available')
@@ -186,20 +186,84 @@ else:
     df_filtered = df
 
 
-def highlight_rows(row):
-    if row['From V3S'] == 'Yes':
-        return ['background-color: #ccffcc'] * len(row)
-    elif 'NOT RECOMMENDED' in str(row['Journal']):
-        return ['background-color: #ffe6e6'] * len(row)
-    else:
-        return [''] * len(row)
+def build_html_table(df):
+    header_cols = ["Average Score", "Journal", "Acceptance Rate (%)", "IF2024", "OpenAccess", "Publisher", "From V3S", "Expected Reward"]
+
+    header_html = "".join(f"<th>{col}</th>" for col in header_cols)
+
+    rows_html = ""
+    for _, row in df.iterrows():
+        if row['From V3S'] == 'Yes':
+            row_style = 'background-color: #ccffcc;'
+        elif 'NOT RECOMMENDED' in str(row['Journal']):
+            row_style = 'background-color: #ffe6e6;'
+        else:
+            row_style = ''
+
+        journal_text = str(row['Journal'])
+        if 'NOT RECOMMENDED' in journal_text:
+            parts = journal_text.split(' - NOT RECOMMENDED', 1)
+            journal_cell = f'{parts[0]}<br><span style="color:#cc0000; font-weight:600;">⚠ NOT RECOMMENDED{parts[1] if len(parts) > 1 else ""}</span>'
+        else:
+            journal_cell = journal_text
+
+        cells = [
+            f'<td style="text-align:center; font-weight:700; font-size:15px;">{row["Average Score"]}</td>',
+            f'<td>{journal_cell}</td>',
+            f'<td style="text-align:center;">{row["Acceptance Rate (%)"]}</td>',
+            f'<td style="text-align:center; font-weight:600;">{row["IF2024"]}</td>',
+            f'<td style="text-align:center;">{row["OpenAccess"]}</td>',
+            f'<td style="text-align:center;">{row["Publisher"]}</td>',
+            f'<td style="text-align:center; font-weight:700; color:{"#1a7a1a" if row["From V3S"] == "Yes" else "#555"};">{row["From V3S"]}</td>',
+            f'<td style="text-align:right; font-weight:600;">{row["Expected Reward"]}</td>',
+        ]
+        rows_html += f'<tr style="{row_style}">{"".join(cells)}</tr>'
+
+    html = f"""
+    <style>
+        .journal-table {{
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 15px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }}
+        .journal-table thead tr {{
+            background-color: #2c5f8a;
+            color: white;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }}
+        .journal-table th {{
+            padding: 12px 14px;
+            text-align: left;
+            border-bottom: 2px solid #1a3f5f;
+            white-space: nowrap;
+        }}
+        .journal-table td {{
+            padding: 11px 14px;
+            border-bottom: 1px solid #dde3ea;
+            vertical-align: middle;
+            line-height: 1.4;
+        }}
+        .journal-table tbody tr:hover {{
+            filter: brightness(0.95);
+        }}
+        .journal-table tbody tr:nth-child(even):not([style*="background"]) {{
+            background-color: #f4f7fb;
+        }}
+    </style>
+    <div style="overflow-x: auto; max-height: 650px; overflow-y: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
+        <table class="journal-table">
+            <thead><tr>{header_html}</tr></thead>
+            <tbody>{rows_html}</tbody>
+        </table>
+    </div>
+    """
+    return html
 
 
-st.dataframe(
-    df_filtered.style.apply(highlight_rows, axis=1),
-    use_container_width=True,
-    height=600
-)
+st.markdown(build_html_table(df_filtered), unsafe_allow_html=True)
 
 st.markdown("---")
 st.caption(
