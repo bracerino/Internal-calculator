@@ -124,53 +124,53 @@ st.header("📋 Recommended Journals by Average Score")
 
 
 journals = [
-    (6.1, "Journal of Materials Science & Technology", "", 14.3, "OA Only", "Elsevier"),
-    (4.0, "Acta Materialia", "", 9.3, "No", "Elsevier"),
-    (3.6, "CORROSION SCIENCE", 19, 8.5, "No", "Elsevier"),
-    (3.6, "npj Computational Materials", "", 11.9, "OA Only", "Nature"),
-    (3.3, "Materials Science and Engineering: A", 18, 7, "No", "Elsevier"),
-    (3.1, "Ceramics International", 33, 5.6, "No", "Elsevier"),
-    (3.0, "Applied Surface Science Advances - NOT RECOMMENDED, in ESCI index, not SCIE", "", 8.7, "OA Only", "Elsevier"),
-    (2.8, "Journal of Materials Research & Technology", "", 6.6, "OA Only", "Nature"),
+    (5.3, "Journal of Materials Science & Technology", "", 14.3, "OA Only", "Elsevier", "No"),
+    (3.4, "Acta Materialia", "", 9.3, "No", "Elsevier", "No"),
+    (3.1, "CORROSION SCIENCE", 19, 8.5, "No", "Elsevier", "No"),
+    (3.6, "npj Computational Materials", "", 11.9, "OA Only", "Nature", "No"),
+    (3.3, "Materials Science and Engineering: A", 18, 7, "No", "Elsevier", "No"),
+    (3.1, "Ceramics International", 33, 5.6, "No", "Elsevier", "No"),
+    (3.0, "Applied Surface Science Advances - NOT RECOMMENDED, in ESCI index, not SCIE", "", 8.7, "OA Only", "Elsevier", "No"),
+    (2.8, "Journal of Materials Research & Technology", "", 6.6, "OA Only", "Nature", "No"),
     (2.8, "Scientific reports (Nature portfolio) - NOT RECOMMENDED, BAD REPUTATION RECENTLY", "", 3.9, "OA Only",
-     "Nature"),
-    (2.6, "Matter and Radiation at Extremes", "", 4.73, "No", "AIP"),
-    (2.4, "Journal of Alloys and Compounds", 23, 6.3, "No", "Elsevier"),
-    (2.4, "MATERIALS & DESIGN", 27, 7.9, "OA only", "Elsevier"),
-    (2.4, "Applied Surface Science", 16, 6.9, "No", "Elsevier"),
-    (2.2, "ACS Applied Materials & Interfaces", "", 8.2, "No", "Elsevier"),
-    (2.2, "Surface & Coatings Technology", 16, 6.1, "No", "Elsevier"),
-    (2.2, "Surfaces and Interfaces", 22, 6.3, "No", "Elsevier"),
-    (2.1, "Journal of Chemical Theory & Computation", "", 5.5, "No", "ACS"),
-    (2.1, "Machine Learning: Science and Technology", 26, 4.6, "No", "IOP"),
-    (2.1, "Chemistry of materials", "", 7, "No", "ACS"),
-    (1.9, "JOURNAL OF COMPUTATIONAL PHYSICS", 28, 3.8, "No", "Elsevier"),
-    (1.9, "Intermetallics", 24, 4.8, "No", "Elsevier"),
-    (1.8, "Journal of Chemical Information and Modeling", "", 5.3, "No", "ACS"),
-    (1.5, "Journal of Computational Science", "", 3.7, "No", "Elsevier"),
-    (1.7, "Computer Physics Communications", 38, 3.4, "No", "Elsevier"),
-    (1.4, "Materials Chemistry and Physics", 16, 4.7, "No", "Elsevier"),
-    (0.0, "Computational Condensed Matter - NOT RECOMMENDED, CURRENTLY in ESCI index, not SCIE", 16, 3.9, "NO", "Elsevier"),
-    (1.3, "Journal of Applied Crystallography", "", 2.8, "No", "Willey"),
-    (1.2, "Journal of Physical Chemistry C", "", 3.2, "No", "ACS"),
-    (1.0, "Computational Materials Science", 21, 3.3, "No", "Elsevier"),
-    (0.8, "Modelling and Simulation in Materials Science and Engineering", 25, 2.4, "No", "IOP"),
-    (0.8, "Molecular simulation", 13, 2, "No", "Taylor and Francis"),
-    (0.8, "CALPHAD-COMPUTER COUPLING OF PHASE DIAGRAMS AND THERMOCHEMISTRY", "", 1.9, "No", "Elsevier"),
+     "Nature", "No"),
+    (2.6, "Matter and Radiation at Extremes", "", 4.73, "No", "AIP", "No"),
+    (2.4, "Journal of Alloys and Compounds", 23, 6.3, "No", "Elsevier", "No"),
+    (2.4, "MATERIALS & DESIGN", 27, 7.9, "OA only", "Elsevier", "No"),
+    (2.4, "Applied Surface Science", 16, 6.9, "No", "Elsevier", "No"),
+    (2.2, "ACS Applied Materials & Interfaces", "", 8.2, "No", "Elsevier", "No"),
+    (2.2, "Surface & Coatings Technology", 16, 6.1, "No", "Elsevier", "No"),
+    (2.2, "Surfaces and Interfaces", 22, 6.3, "No", "Elsevier", "No"),
+    (2.1, "Journal of Chemical Theory & Computation", "", 5.5, "No", "ACS", "No"),
+    (2.1, "Machine Learning: Science and Technology", 26, 4.6, "No", "IOP", "No"),
+    (2.1, "Chemistry of materials", "", 7, "No", "ACS", "No"),
+    (1.9, "JOURNAL OF COMPUTATIONAL PHYSICS", 28, 3.8, "No", "Elsevier", "No"),
+    (1.9, "Intermetallics", 24, 4.8, "No", "Elsevier", "No"),
+    (1.8, "Journal of Chemical Information and Modeling", "", 5.3, "No", "ACS", "No"),
+    (1.5, "Journal of Computational Science", "", 3.7, "No", "Elsevier", "No"),
+    (1.7, "Computer Physics Communications", 38, 3.4, "No", "Elsevier", "No"),
+    (1.4, "Materials Chemistry and Physics", 16, 4.7, "No", "Elsevier", "No"),
+    (0.0, "Computational Condensed Matter - NOT RECOMMENDED, CURRENTLY in ESCI index, not SCIE", 16, 3.9, "NO", "Elsevier", "No"),
+    (1.3, "Journal of Applied Crystallography", "", 2.8, "No", "Willey", "No"),
+    (1.2, "Journal of Physical Chemistry C", "", 3.2, "No", "ACS", "No"),
+    (1.0, "Computational Materials Science", 21, 3.3, "No", "Elsevier", "No"),
+    (0.8, "Modelling and Simulation in Materials Science and Engineering", 25, 2.4, "No", "IOP", "No"),
+    (0.8, "Molecular simulation", 13, 2, "No", "Taylor and Francis", "No"),
+    (0.8, "CALPHAD-COMPUTER COUPLING OF PHASE DIAGRAMS AND THERMOCHEMISTRY", "", 1.9, "No", "Elsevier", "No"),
     (0.7, "NUCLEAR INSTRUMENTS & METHODS IN PHYSICS RESEARCH SECTION B-BEAM INTERACTIONS WITH MATERIALS AND ATOMS", 52,
-     1.3, "No", "Elsevier"),
+     1.3, "No", "Elsevier", "No"),
     (1.2, "Materials", "",
-     3.2, "No", "MDPI"),
+     3.2, "No", "MDPI", "No"),
     (2.1, "Advanced Theory and Simulations", "",
-     2.9, "No", "Willey"),
+     2.9, "No", "Willey", "No"),
     (1.3, "Vacuum", "",
-     3.9, "No", "Elsevier"),
+     3.9, "No", "Elsevier", "No"),
     (9.3, "Reports on Progress in Physics", 4,
-         20.3, "No", "IOP"),
+         20.3, "No", "IOP", "No"),
 ]
 
 df = pd.DataFrame(journals,
-                  columns=["Average Score", "Journal", "Acceptance Rate (%)", "IF2024", "OpenAccess", "Publisher"])
+                  columns=["Average Score", "Journal", "Acceptance Rate (%)", "IF2024", "OpenAccess", "Publisher", "From V3S"])
 
 df['Acceptance Rate (%)'] = df['Acceptance Rate (%)'].replace('', 'Not available')
 df['Publisher'] = df['Publisher'].replace('', 'Not available')
@@ -185,11 +185,18 @@ if search:
 else:
     df_filtered = df
 
+
+def highlight_rows(row):
+    if row['From V3S'] == 'Yes':
+        return ['background-color: #ccffcc'] * len(row)
+    elif 'NOT RECOMMENDED' in str(row['Journal']):
+        return ['background-color: #ffe6e6'] * len(row)
+    else:
+        return [''] * len(row)
+
+
 st.dataframe(
-    df_filtered.style.apply(
-        lambda x: ['background-color: #ffe6e6' if 'NOT RECOMMENDED' in str(v) else '' for v in x],
-        subset=['Journal']
-    ),
+    df_filtered.style.apply(highlight_rows, axis=1),
     use_container_width=True,
     height=600
 )
