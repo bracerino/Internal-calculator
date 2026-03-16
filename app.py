@@ -142,7 +142,7 @@ journals = [
     (2.2, "Surface & Coatings Technology", 16, 6.1, "No", "Elsevier", "No"),
     (2.2, "Surfaces and Interfaces", 22, 6.3, "No", "Elsevier", "No"),
     (2.1, "Journal of Chemical Theory & Computation", "", 5.5, "No", "ACS", "No"),
-    (2.1, "Machine Learning: Science and Technology", 26, 4.6, "No", "IOP", "Yes"),
+    (2.1, "Machine Learning: Science and Technology", 26, 4.6, "No", "IOP", "No"),
     (2.1, "Chemistry of materials", "", 7, "No", "ACS", "No"),
     (1.9, "JOURNAL OF COMPUTATIONAL PHYSICS", 28, 3.8, "No", "Elsevier", "No"),
     (1.9, "Intermetallics", 24, 4.8, "No", "Elsevier", "No"),
@@ -189,7 +189,11 @@ else:
 def build_html_table(df):
     header_cols = ["Average Score", "Journal", "Acceptance Rate (%)", "IF2024", "OpenAccess", "Publisher", "From V3S", "Expected Reward"]
 
-    header_html = "".join(f"<th>{col}</th>" for col in header_cols)
+    header_html = "".join(
+        f'<th onclick="sortTable(this, {i})" style="cursor:pointer; user-select:none;">'
+        f'{col} <span class="sort-icon">&#x21C5;</span></th>'
+        for i, col in enumerate(header_cols)
+    )
 
     rows_html = ""
     for _, row in df.iterrows():
@@ -233,6 +237,9 @@ def build_html_table(df):
             font-size: 14px;
             text-transform: uppercase;
             letter-spacing: 0.05em;
+            position: sticky;
+            top: 0;
+            z-index: 2;
         }}
         .journal-table th {{
             padding: 12px 14px;
@@ -240,6 +247,12 @@ def build_html_table(df):
             border-bottom: 2px solid #1a3f5f;
             white-space: nowrap;
         }}
+        .journal-table th:hover {{
+            background-color: #1a3f5f;
+        }}
+        .journal-table th.sorted-asc .sort-icon::after  {{ content: ' ▲'; }}
+        .journal-table th.sorted-desc .sort-icon::after {{ content: ' ▼'; }}
+        .sort-icon {{ font-size: 11px; opacity: 0.7; }}
         .journal-table td {{
             padding: 11px 14px;
             border-bottom: 1px solid #dde3ea;
@@ -253,6 +266,36 @@ def build_html_table(df):
             background-color: #f4f7fb;
         }}
     </style>
+    <script>
+    function sortTable(th, colIndex) {{
+        var table = th.closest('table');
+        var tbody = table.querySelector('tbody');
+        var rows = Array.from(tbody.querySelectorAll('tr'));
+        var asc = th.classList.contains('sorted-asc');
+
+        // Reset all headers
+        table.querySelectorAll('th').forEach(function(h) {{
+            h.classList.remove('sorted-asc', 'sorted-desc');
+            h.querySelector('.sort-icon').textContent = '\\u21C5';
+        }});
+
+        rows.sort(function(a, b) {{
+            var aText = a.querySelectorAll('td')[colIndex].innerText.trim();
+            var bText = b.querySelectorAll('td')[colIndex].innerText.trim();
+            // Strip spaces from numbers (e.g. "20 000")
+            var aNum = parseFloat(aText.replace(/\\s/g, '').replace(',', '.'));
+            var bNum = parseFloat(bText.replace(/\\s/g, '').replace(',', '.'));
+            if (!isNaN(aNum) && !isNaN(bNum)) {{
+                return asc ? bNum - aNum : aNum - bNum;
+            }}
+            return asc ? bText.localeCompare(aText) : aText.localeCompare(bText);
+        }});
+
+        rows.forEach(function(r) {{ tbody.appendChild(r); }});
+        th.classList.add(asc ? 'sorted-desc' : 'sorted-asc');
+        th.querySelector('.sort-icon').textContent = '';
+    }}
+    </script>
     <div style="overflow-x: auto; max-height: 650px; overflow-y: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
         <table class="journal-table">
             <thead><tr>{header_html}</tr></thead>
