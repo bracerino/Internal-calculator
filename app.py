@@ -242,7 +242,7 @@ function sortTable(th, col) {{
 </html>"""
 
 
-components.html(build_html_table(df_filtered), height=680, scrolling=False)
+components.html(build_html_table(df_filtered.sort_values("Average Score", ascending=False)), height=680, scrolling=False)
 
 st.markdown("---")
 
