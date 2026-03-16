@@ -158,7 +158,7 @@ journals = [
     (0.8, "Molecular simulation", 13, 2, "No", "Taylor and Francis", "No"),
     (0.8, "CALPHAD-COMPUTER COUPLING OF PHASE DIAGRAMS AND THERMOCHEMISTRY", "", 1.9, "No", "Elsevier", "No"),
     (0.7, "NUCLEAR INSTRUMENTS & METHODS IN PHYSICS RESEARCH SECTION B-BEAM INTERACTIONS WITH MATERIALS AND ATOMS", 52,
-     1.3, "No", "Elsevier", "No"),
+     1.3, "No", "Elsevier", "Yes"),
     (1.2, "Materials", "",
      3.2, "No", "MDPI", "No"),
     (2.1, "Advanced Theory and Simulations", "",
@@ -170,7 +170,7 @@ journals = [
 ]
 
 df = pd.DataFrame(journals,
-                  columns=["Average Score", "Journal", "Acceptance Rate (%)", "IF2024", "OpenAccess", "Publisher", "From V3S"])
+                  columns=["Average Score", "Journal", "Acceptance Rate (%)", "IF2024", "OpenAccess", "Publisher", "From System"])
 
 df['Acceptance Rate (%)'] = df['Acceptance Rate (%)'].replace('', 'Not available')
 df['Publisher'] = df['Publisher'].replace('', 'Not available')
