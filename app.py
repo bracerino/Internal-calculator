@@ -41,7 +41,7 @@ journals = [
     (3.6, "npj Computational Materials", "", 11.9, "OA Only", "Nature", "No"),
     (3.3, "Materials Science and Engineering: A", 18, 7, "No", "Elsevier", "No"),
     (8.6, "Materials Science and Engineering: R: Reports", 16, 26.8, "No", "Elsevier", "Yes"),
-    (3.5, "Ceramics International", 33, 5.6, "No", "Elsevier", "No"),
+    (3.1, "Ceramics International", 33, 5.6, "No", "Elsevier", "Yes"),
     (0.0, "Applied Surface Science Advances - NOT RECOMMENDED, in ESCI index, not SCIE", "", 8.7, "OA Only", "Elsevier", "No"),
     (2.4, "Journal of Materials Research & Technology", "", 6.6, "OA Only", "Elsevier", "Yes"),
     (1.5, "Scientific reports (Nature portfolio) - NOT RECOMMENDED, BAD REPUTATION RECENTLY", "", 3.9, "OA Only", "Nature", "No"),
