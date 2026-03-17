@@ -336,7 +336,7 @@ with col2:
         )
     )
 
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig)
 
 st.markdown("---")
 st.caption("💡 Note: Rewards are calculated using a piecewise linear function that increases progressively with publication points.")
