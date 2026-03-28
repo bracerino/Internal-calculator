@@ -339,4 +339,5 @@ with col2:
     st.plotly_chart(fig)
 
 st.markdown("---")
+st.caption("https://jcr.clarivate.com/jcr/browse-journals")
 st.caption("💡 Note: Rewards are calculated using a piecewise linear function that increases progressively with publication points.")
