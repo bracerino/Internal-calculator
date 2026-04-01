@@ -74,6 +74,8 @@ journals = [
     (1.3, "Vacuum", "", 3.9, "No", "Elsevier", "Yes"),
     (9.4, "Reports on Progress in Physics", 4, 20.3, "No", "IOP", "Yes"),
     (1.6, "Scientometrics", "", 3.5, "No", "Springer", "Yes"),
+    (2.0, "Spectrochimica Acta Part B: Atomic Spectroscopy", "", 3.8, "No", "Elsevier", "Yes"),
+    (1.4, "Journal of Analytical Atomic Spectrometry", "", 3.2, "No", "RSC", "Yes"),
 ]
 
 df = pd.DataFrame(journals, columns=["Average Score", "Journal", "Acceptance Rate (%)", "IF2024", "OpenAccess", "Publisher", "From System"])
