@@ -79,6 +79,8 @@ journals = [
     (10.4, "Nature Communications", "", 15.7, "Yes", "Nature", "Yes"),
     (0.55, "Surface and Interface Analysis", 33, 1.8, "No", "Wiley", "Yes"),
     (0.98, "Metals", "", 2.5, "Yes", "MDPI", "Yes"),
+    (0.55, "Philosophical Magazine", "", 1.5, "No", "Taylor and Francis", "Yes"),
+    
 ]
 
 df = pd.DataFrame(journals, columns=["Average Score", "Journal", "Acceptance Rate (%)", "IF2024", "OpenAccess", "Publisher", "From System"])
