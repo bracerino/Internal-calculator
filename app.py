@@ -81,6 +81,7 @@ journals = [
     (0.98, "Metals", "", 2.5, "Yes", "MDPI", "Yes"),
     (0.55, "Philosophical Magazine", "", 1.5, "No", "Taylor and Francis", "Yes"),
     (1.18, "Journal of Materials Science", "", 3.9, "No", "Springer", "Yes"),
+    (2.1, "Journal of the American Ceramic Society", 41, 3.8, "No", "Wiley", "Yes"),
     
 ]
 
