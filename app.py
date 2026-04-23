@@ -86,6 +86,7 @@ journals = [
     (1.42, "Journal of Physical Chemistry Letters", "", 4.7, "No", "ACS", "No"),
     (0.88, "Journal of Physical Chemistry B", "", 2.9, "No", "ACS", "No"),
     (1.08, "Journal of Physical Chemistry A", "", 2.8, "No", "ACS", "No"),
+    (1.65, "ACS Omega", "", 4.3, "Yes", "ACS", "No"),
 
     
     
