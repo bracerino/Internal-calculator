@@ -83,6 +83,11 @@ journals = [
     (1.18, "Journal of Materials Science", "", 3.9, "No", "Springer", "No"),
     (2.1, "Journal of the American Ceramic Society", 41, 3.8, "No", "Wiley", "No"),
     (1.3, "Results in Surfaces and Interfaces - NOT RECOMMENDED, CURRENTLY in ESCI index, not SCIE", "", 4.4, "Yes", "Elsevier", "No"),
+    (1.42, "Journal of Physical Chemistry Letters", "", 4.7, "No", "ACS", "No"),
+    (0.88, "Journal of Physical Chemistry B", "", 2.9, "No", "ACS", "No"),
+    (1.08, "Journal of Physical Chemistry A", "", 2.8, "No", "ACS", "No"),
+
+    
     
 ]
 
