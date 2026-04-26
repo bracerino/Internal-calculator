@@ -39,7 +39,7 @@ journals = [
     (3.4, "Acta Materialia", "", 9.3, "No", "Elsevier", "Yes"),
     (3.1, "CORROSION SCIENCE", 19, 8.5, "No", "Elsevier", "Yes"),
     (3.6, "npj Computational Materials", "", 11.9, "OA Only", "Nature", "No"),
-    (3.3, "Materials Science and Engineering: A", 18, 7, "No", "Elsevier", "No"),
+    (2.1, "Materials Science and Engineering: A", 18, 7, "No", "Elsevier", "No"),
     (8.6, "Materials Science and Engineering: R: Reports", 16, 26.8, "No", "Elsevier", "Yes"),
     (3.1, "Ceramics International", 33, 5.6, "No", "Elsevier", "Yes"),
     (0.0, "Applied Surface Science Advances - NOT RECOMMENDED, in ESCI index, not SCIE", "", 8.7, "OA Only", "Elsevier", "No"),
@@ -88,6 +88,7 @@ journals = [
     (1.08, "Journal of Physical Chemistry A", "", 2.8, "No", "ACS", "No"),
     (1.65, "ACS Omega", "", 4.3, "Yes", "ACS", "No"),
     (1.15, "The Journal of Chemical Physics", "", 3.1, "No", "AIP", "No"),
+    (1.51, "Materials Science and Engineering: B", "", 4.6, "No", "Elsevier", "No"),
 
     
     
