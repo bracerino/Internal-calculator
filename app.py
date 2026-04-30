@@ -91,6 +91,7 @@ journals = [
     (1.51, "Materials Science and Engineering: B", "", 4.6, "No", "Elsevier", "No"),
     (2.93, "Journal of Colloid and Interface Science", 14, 9.7, "No", "Elsevier", "No"),
     (1.36, "Biomaterials Advances (previously as Materials Science and Engineering: C) ", 12, 6.0, "No", "Elsevier", "No"),
+    (0.88, "Journal of Molecular Modeling)", "", 2.5, "No", "Springer", "No"),
     
 
     
