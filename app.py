@@ -94,6 +94,8 @@ journals = [
     (0.88, "Journal of Molecular Modeling", "", 2.5, "No", "Springer", "No"),
     (0.85, "Computational and Theoretical Chemistry", "", 2.8, "No", "Elsevier", "No"),
     (1.84, "Journal of Computational Chemistry", 23, 4.8, "No", "Wiley", "No"),
+    (1.81, "Journal of Physics and Chemistry of Solids", "", 4.9, "No", "Elsevier", "No"),
+    
     
 
     
